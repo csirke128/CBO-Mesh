@@ -2,13 +2,15 @@ pdxmesh = {
 	name = "male_cloaks_secular_fp1_nobility_02_mesh"
 	file = "m_cloaks_secular_fp1_nob_02.mesh"
 
-	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_infant"		type = "m_cloaks_secular_fp1_nob_02_bs_infant.mesh" }
-	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_fat"			type = "m_cloaks_secular_fp1_nob_02_bs_fat.mesh" }
-	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_gaunt"			type = "m_cloaks_secular_fp1_nob_02_bs_gaunt.mesh" }
-	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_muscular"		type = "m_cloaks_secular_fp1_nob_02_bs_muscular.mesh" }	
-	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_old"			type = "m_cloaks_secular_fp1_nob_02_bs_old.mesh" }
-	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_dwarf"			type = "m_cloaks_secular_fp1_nob_02_bs_dwarf.mesh" }
-
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_infant"		    type = "m_cloaks_secular_fp1_nob_02_bs_infant.mesh" }
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_fat"			    type = "m_cloaks_secular_fp1_nob_02_bs_fat.mesh" }
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_gaunt"			    type = "m_cloaks_secular_fp1_nob_02_bs_gaunt.mesh" }
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_muscular"		    type = "m_cloaks_secular_fp1_nob_02_bs_muscular.mesh" }	
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_old"			    type = "m_cloaks_secular_fp1_nob_02_bs_old.mesh" }
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_dwarf"			    type = "m_cloaks_secular_fp1_nob_02_bs_dwarf.mesh" }
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_butt_size_2_max"	type = "m_cloaks_secular_fp1_nob_02_bs_butt_size_2_max.mesh" }
+	blend_shape = { id = "male_cloaks_secular_fp1_nobility_02_bs_butt_size_max"		type = "m_cloaks_secular_fp1_nob_02_bs_butt_size_max.mesh" }
+    
 	meshsettings = {
 		name = "male_cloaks_secular_fp1_nobility_02Shape"
 		index = 0
@@ -30,6 +32,8 @@ entity = {
 	attribute = { name = "bs_body_muscular_1"				blend_shape = "male_cloaks_secular_fp1_nobility_02_bs_muscular" }	
 	attribute = { name = "bs_body_old_1"					blend_shape = "male_cloaks_secular_fp1_nobility_02_bs_old" }
 	attribute = { name = "bs_body_dwarf_1"					blend_shape = "male_cloaks_secular_fp1_nobility_02_bs_dwarf" }
+	attribute = { name = "bs_body_butt_size_max_2"			blend_shape = "male_cloaks_secular_fp1_nobility_02_bs_butt_size_2_max" }
+	attribute = { name = "bs_body_butt_size_max"			blend_shape = "male_cloaks_secular_fp1_nobility_02_bs_butt_size_max" }
 
 	game_data = {
         portrait_entity_user_data = {

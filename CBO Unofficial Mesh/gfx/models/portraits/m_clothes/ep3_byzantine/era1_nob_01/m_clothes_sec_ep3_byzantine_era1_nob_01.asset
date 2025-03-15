@@ -10,7 +10,7 @@ pdxmesh = {
 	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_hips_max"		type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_hips_max.mesh" }
 	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_hips_min"		type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_hips_min.mesh" }
 	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_infant"		type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_infant.mesh" }
-	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_muscular"		type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_musc.mesh" }	
+	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_muscular"		type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_muscular.mesh" }	
 	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_old"			type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_old.mesh" }
 	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_shoulders_max"	type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_shoulders_max.mesh" }
 	blend_shape = { id = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_shoulders_min"	type = "m_clothes_sec_ep3_byzantine_era1_nob_01_bs_shoulders_min.mesh" }
