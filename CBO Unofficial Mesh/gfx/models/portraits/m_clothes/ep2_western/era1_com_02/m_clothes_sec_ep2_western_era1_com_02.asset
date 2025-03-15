@@ -1,0 +1,29 @@
+entity = {
+	name = "m_clothes_sec_ep2_western_era1_com_02_entity"
+	pdxmesh = "m_clothes_sec_ep2_western_era1_nob_02_mesh"
+
+	attribute = { name = "bs_body_butt_size_max"						blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_butt_max" }
+	attribute = { name = "bs_body_butt_size_min"						blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_butt_min" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_dwarf" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_gaunt" }
+	attribute = { name = "bs_body_hips_max"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_hips_max" }
+	attribute = { name = "bs_body_hips_min"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_hips_min" }
+	attribute = { name = "bs_body_infant_1"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_infant" }
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_musc" }	
+	attribute = { name = "bs_body_old_1"								blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_old" }
+	attribute = { name = "bs_body_penis_size_max_clothed"				blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_penis_max_clothed" }
+	attribute = { name = "bs_body_shoulders_max"						blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_sldrs_max" }
+	attribute = { name = "bs_body_shoulders_min"						blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_sldrs_min" }
+	attribute = { name = "bs_body_waist_max"							blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_waist_max" }
+	attribute = { name = "bs_body_waist_min"							blend_shape = "m_clothes_sec_ep2_western_era1_nob_02_bs_waist_min" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_clothes/ep2_western/era1_nob_02/m_clothes_sec_ep2_western_era1_nob_02_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "ep2_western_era1_commoner_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}

@@ -1,0 +1,101 @@
+﻿# These assets are then used in the genes (game/common/genes/..) at the bottom of the file. 
+
+#####################################
+#									#
+# 	CBO Female Hair Replacement		#
+#									#
+#####################################
+
+cbo_female_hair_western_06 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head }
+	entity = { required_tags = "undressed"			shared_pose_entity = head		entity = female_hair_western_05_entity }
+	entity = { required_tags = "revealing_2"		shared_pose_entity = head		entity = female_hair_western_05_entity }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "female_hair_western_06_entity" }
+	
+}
+
+#####################################
+#									#
+# 			 CBO Female Hair		#
+#									#
+#####################################
+
+cbo_female_hair_long_straight_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap_02"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_01_cap_02_entity" }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_01_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_straight_01_entity" }
+}
+
+cbo_female_hair_long_straight_02 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_02_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_02_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_straight_02_entity" }
+}
+
+cbo_female_hair_long_straight_03 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_03_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_straight_03_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_straight_03_entity" }
+}
+
+cbo_female_hair_long_wavy_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_wavy_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_wavy_01_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_wavy_01_entity" }
+}
+
+cbo_female_hair_long_wavy_02 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_wavy_02_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_wavy_02_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_wavy_02_entity" }
+}
+
+cbo_female_hair_long_curly_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_curly_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_curly_01_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_curly_01_entity" }
+}
+
+cbo_female_hair_long_braid_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap_02"				shared_pose_entity = head		entity = "cbo_female_hair_long_braid_01_cap_02_entity" }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_braid_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_braid_01_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_braid_01_entity" }
+}
+
+cbo_female_hair_long_crown_braid_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_crown_braid_01_entity" }
+}
+
+cbo_female_hair_long_ponytail_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_ponytail_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_ponytail_01_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_ponytail_01_entity" }
+}
+
+cbo_female_hair_ponytail_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_ponytail_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_ponytail_01_crown_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_ponytail_01_entity" }
+}
+
+##Sub Saharan Hairs##
+cbo_female_hair_long_dreads_01 = {
+	entity = { required_tags = "no_hair"			shared_pose_entity = head		 }
+	entity = { required_tags = "cap"				shared_pose_entity = head		entity = "cbo_female_hair_long_dreads_01_cap_entity" }
+	entity = { required_tags = "crown"				shared_pose_entity = head		entity = "cbo_female_hair_long_dreads_01_crown_entity" }
+	entity = { required_tags = "very_curly_hair"	shared_pose_entity = head		entity = "cbo_female_hair_long_dreads_01_entity" }
+	entity = { required_tags = ""					shared_pose_entity = head		entity = "cbo_female_hair_long_dreads_01_entity" }
+	
+}

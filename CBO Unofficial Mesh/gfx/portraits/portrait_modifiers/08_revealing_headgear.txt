@@ -1,0 +1,3013 @@
+﻿# Tags:
+# rank_headgear: any headgear that signifies a certain title. crowns, pope hat etc.
+
+revealing_headgear_base = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 8
+
+## SP2 ## 
+	
+	sp2_western_imperial_era1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = sp2_western_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 90
+				has_dlc_feature = elegance_of_the_empire
+				OR = {
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = western
+					}
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = northern
+					}						
+				}
+			}
+			modifier = {
+				add = 90
+				has_dlc_feature = elegance_of_the_empire
+				OR = {
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = western
+					}	
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = western
+					}	
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = northern
+					}	
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = northern
+					}					
+				}
+				is_female = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes 
+                NOT = {
+                	portrait_era1_trigger = yes 
+                }  
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	sp2_western_imperial_era2 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = sp2_western_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 90
+				has_dlc_feature = elegance_of_the_empire
+				OR = {
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = western
+					}
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = northern
+					}						
+				}
+			}
+			modifier = {
+				add = 90
+				has_dlc_feature = elegance_of_the_empire
+				OR = {
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = western
+					}	
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = western
+					}	
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = northern
+					}	
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = northern
+					}					
+				}
+				is_female = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes 
+                NOT = {
+                	portrait_era2_trigger = yes 
+                }  
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	sp2_western_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = sp2_western_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				has_dlc_feature = elegance_of_the_empire
+				portrait_high_nobles_headgear_trigger = {
+					CULTURE_INPUT = western
+				}	
+			}
+			modifier = {
+				factor = 0
+				has_ep2_dlc_trigger = yes
+				NOR = {
+					portrait_era2_trigger = yes 
+					portrait_era3_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+
+## DDE HRE ##
+
+	dde_hre_commoners = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_dde_hre_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 20
+                portrait_commoner_clothing_trigger = {  
+                    CULTURE_INPUT = dde_hre # CULTURE_INPUT gets added into the trigger referenced in 00_clothing_triggers.txt so it's important the input is a correct match to an existing culture trigger
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOR = { 
+                	portrait_era3_trigger = yes 
+                	portrait_era4_trigger = yes 
+                } 
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	dde_hre_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_dde_hre_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = dde_hre } # common/scripted_modifiers/00_portrait_modifiers.txt
+			modifier = {
+				add = 50
+				portrait_low_nobles_clothing_trigger = {
+					CULTURE_INPUT = dde_hre
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOR = { 
+                	portrait_era3_trigger = yes 
+                	portrait_era4_trigger = yes 
+                } 
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	dde_hre_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = dde_hre_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_high_nobles_headgear_trigger = {
+					CULTURE_INPUT = dde_hre
+				}	
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOR = { 
+                	portrait_era3_trigger = yes 
+                	portrait_era4_trigger = yes 
+                } 
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	dde_hre_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = dde_hre_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_trigger = {
+					CULTURE_INPUT = dde_hre
+				}	
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOR = { 
+                	portrait_era3_trigger = yes 
+                	portrait_era4_trigger = yes 
+                } 
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	# Reichskrone
+	dde_hre_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = dde_hre_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100 # always pick the HRE crown over the western one
+				portrait_reichskrone_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## Western ##
+
+	western_commoners = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_western_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+				portrait_commoner_headgear_fallback_trigger = {
+					CULTURE_INPUT = western
+				}
+				NOT = { has_ep2_dlc_trigger = yes }
+			}
+			modifier = {
+				add = 20
+				portrait_commoner_clothing_trigger = {
+					CULTURE_INPUT = western
+				}
+				NOT = { has_ep2_dlc_trigger = yes }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+    ep2_western_era1_commoners = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_headgear
+                template = cbo_ep2_western_era1_common
+                range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+        }   
+        weight = {
+            base = 0
+			modifier = {
+				add = 80
+				portrait_commoner_headgear_fallback_trigger = {
+					CULTURE_INPUT = western
+				}
+				has_ep2_dlc_trigger = yes 
+				portrait_era1_trigger = yes 
+			}
+            modifier = {
+                add = 20
+                portrait_commoner_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes     
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+        }
+    }
+
+    ep2_western_era2_commoners = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_headgear
+                template = cbo_western_common
+                range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+        }   
+        weight = {
+            base = 0
+			modifier = {
+				add = 80
+				portrait_commoner_headgear_fallback_trigger = {
+					CULTURE_INPUT = western
+				}
+				has_ep2_dlc_trigger = yes 
+				portrait_era2_trigger = yes 
+			}
+            modifier = {
+                add = 20
+                portrait_commoner_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes   
+                portrait_era2_trigger = yes     
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+        }
+    }
+
+    ep2_western_era3_commoners = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_headgear
+                template = cbo_ep2_western_era3_common
+                range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+        }   
+        weight = {
+            base = 0
+			modifier = {
+				add = 80
+				portrait_commoner_headgear_fallback_trigger = {
+					CULTURE_INPUT = western
+				}
+				has_ep2_dlc_trigger = yes 
+				portrait_era3_trigger = yes 
+			}
+            modifier = {
+                add = 20
+                portrait_commoner_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes   
+                portrait_era3_trigger = yes     
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+        }
+    }
+
+	western_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_western_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+		    modifier = {
+		        add = 50
+		        court_fashion_level_4_headgear_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+		        portrait_era1_trigger = yes 
+		    }
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                NOT = { has_ep2_dlc_trigger = yes }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	ep2_western_era1_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_ep2_western_era1_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+		    modifier = {
+		        add = 50
+		        court_fashion_level_4_headgear_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+		        portrait_era1_trigger = yes 
+		    }
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era1_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	ep2_western_era2_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_western_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+		    modifier = {
+		        add = 50
+		        court_fashion_level_4_headgear_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+		        portrait_era2_trigger = yes 
+		    }
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era2_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	ep2_western_era3_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_ep2_western_era3_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+		    modifier = {
+		        add = 50
+		        court_fashion_level_4_headgear_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+		        portrait_era3_trigger = yes 
+		    }
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era3_trigger = yes  
+                	portrait_era4_trigger = yes  
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	western_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                NOT = { has_ep2_dlc_trigger = yes }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	ep2_western_era1_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era1_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era1_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era2_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era2_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era3_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era3_trigger = yes  
+                	portrait_era4_trigger = yes  
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	western_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_trigger = {
+					CULTURE_INPUT = western 
+				}
+				NOT = { has_ep2_dlc_trigger = yes }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_western_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_western_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_trigger = {
+					CULTURE_INPUT = western 
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_ep1_dlc_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes 
+                NOT = {
+                	portrait_era2_trigger = yes  
+                }  
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_western_royalty_era1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_western_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_trigger = {
+					CULTURE_INPUT = western 
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_ep1_dlc_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes 
+                NOT = {
+                	portrait_era1_trigger = yes
+                }  
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era1_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era1_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era1_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era2_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era2_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era3_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_era3_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era3_trigger = yes
+                	portrait_era4_trigger = yes
+                }  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_italian_royalty = { # The Iron Crown of Lombardy
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_italian_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_trigger = {
+					CULTURE_INPUT = western 
+				}
+				culture = {
+					has_cultural_pillar = heritage_latin
+				}
+				has_ep1_dlc_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	western_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_imperial_trigger = {
+					CULTURE_INPUT = western 
+				}
+				NOT = { has_ep2_dlc_trigger = yes }
+			}
+			modifier = {
+				add = 50
+				portrait_imperial_trigger = {
+					CULTURE_INPUT = northern 
+				}
+				NOT = { has_ep2_dlc_trigger = yes }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era1_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era1_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era1_trigger = yes  
+			}
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {  
+                    CULTURE_INPUT = northern 
+                }
+                has_ep2_dlc_trigger = yes
+                portrait_era1_trigger = yes  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era2_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era2_trigger = yes
+                	portrait_era3_trigger = yes
+                }  
+			}
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {  
+                    CULTURE_INPUT = northern 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era2_trigger = yes
+                	portrait_era3_trigger = yes
+                }  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep2_western_era4_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {  
+                    CULTURE_INPUT = western 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era4_trigger = yes
+                }  
+			}
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {  
+                    CULTURE_INPUT = northern 
+                }
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era4_trigger = yes
+                }  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	#RTT headgear
+	monarchs_journey_late_unlock = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = monarchs_journey_unleashed
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+
+		weight = {
+			base = 0
+			modifier = {
+				add = 10
+				current_date >= 1300.1.1
+				OR = {
+					portrait_western_clothing_trigger = yes
+					portrait_western_clothing_spouse_trigger = yes
+				}
+				OR = {
+					AND = {
+						is_lowborn = no
+						is_female = yes
+					}
+					AND = {
+						government_has_flag = government_is_republic
+						highest_held_title_tier <= tier_barony
+					}
+				}
+				trigger_if = {
+					limit = {
+						is_ruler = yes
+					}
+					primary_title.tier <= tier_duchy
+				}
+			}
+			modifier = {
+				add = 30
+				portrait_era4_trigger = yes
+                portrait_low_nobles_trigger = {
+                    CULTURE_INPUT = western
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+## Byzantine ##
+
+	byzantine_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_byzantine_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+			}
+			modifier = {
+				add = 20
+                portrait_commoner_clothing_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	byzantine_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_byzantine_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = byzantine } 
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {  
+                    CULTURE_INPUT = byzantine 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	byzantine_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_byzantine_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = byzantine
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	byzantine_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = byzantine_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = byzantine
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	byzantine_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = byzantine_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_imperial_trigger = {
+                    CULTURE_INPUT = byzantine 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_byzantine_imperial = { # Crown of Justinian
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_byzantine_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_imperial_trigger = {
+					CULTURE_INPUT = byzantine 
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_title = title:e_byzantium
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_ep1_dlc_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## INDIAN ##
+
+	indian_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = indian_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = indian
+                }
+			}
+			modifier = { # Non-european jesters should not use the jester hat
+				add = 1000
+				portrait_jester_trigger = {  
+                    CULTURE_INPUT = indian 
+                }
+			}
+			modifier = {
+				add = 20
+				portrait_commoner_clothing_trigger = {  
+                    CULTURE_INPUT = indian 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	indian_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = indian_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = indian } 
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {  
+                    CULTURE_INPUT = indian 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	indian_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = indian_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = indian
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	indian_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = indian_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = indian
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_indian_royalty = { 
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_indian_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				portrait_royalty_trigger = {
+					CULTURE_INPUT = indian
+				}
+				culture = {
+					has_cultural_pillar = heritage_burman
+				}
+				has_ep1_dlc_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	indian_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = indian_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = indian 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_indian_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_indian_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = indian 
+                }
+				culture = {
+					has_cultural_pillar = heritage_burman
+				}
+				has_ep1_dlc_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## MENA ##
+
+	mena_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_mena_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = mena
+                }
+			}
+			modifier = { # Non-european jesters should not use the jester hat
+				add = 1000
+                portrait_jester_trigger = {  
+                    CULTURE_INPUT = mena 
+                }
+			}
+			modifier = {
+				add = 20
+                portrait_commoner_clothing_trigger = {
+                    CULTURE_INPUT = mena
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	mena_mayors = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_mena_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 60
+				portrait_mayor_headgear_trigger = {
+					CULTURE_INPUT = mena
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	mena_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_mena_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}	
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = mena } 
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {
+                    CULTURE_INPUT = mena
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	mena_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_mena_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}		
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = mena
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	mena_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_mena_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}		
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = mena
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_mena_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_mena_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}		
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = mena 
+                }
+				culture = {
+					has_cultural_pillar = heritage_east_african
+				}
+				religion = religion:islam_religion
+				has_ep1_dlc_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	mena_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = mena_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_imperial_nobles_headgear_trigger = {
+                    CULTURE_INPUT = mena 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_persian_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_persian_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_imperial_nobles_headgear_trigger = {
+                    CULTURE_INPUT = mena 
+                }
+                culture = {
+                    has_cultural_pillar = heritage_iranian
+                }
+                has_ep1_dlc_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## DDE ABBASID ##
+
+	dde_abbasid_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = dde_abbasid_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 20
+                portrait_commoner_clothing_trigger = {
+                    CULTURE_INPUT = dde_abbasid
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	dde_abbasid_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_dde_abbasid_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = dde_abbasid
+                } 
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	dde_abbasid_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_dde_abbasid_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = dde_abbasid
+                }  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	dde_abbasid_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = dde_abbasid_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100 # pick over mena
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = dde_abbasid 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## Steppe ##
+
+	steppe_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = steppe_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+			}
+			modifier = { # Non-european jesters should not use the jester hat
+				add = 1000
+                portrait_jester_trigger = {  
+                    CULTURE_INPUT = steppe 
+                }
+				NOR = {
+					portrait_western_clothing_trigger = yes
+					portrait_byzantine_clothing_trigger = yes
+					portrait_northern_clothing_trigger = yes
+				}
+			}
+			modifier = {
+				add = 20
+                portrait_commoner_clothing_trigger = {  
+                    CULTURE_INPUT = steppe 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	steppe_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = steppe_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = steppe } 
+			modifier = {
+				add = 50
+                portrait_low_nobles_clothing_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	steppe_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_steppe_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = steppe
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	steppe_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_steppe_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = {
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = steppe
+					}   
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = steppe
+					}   
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_steppe_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_steppe_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                OR = {
+					portrait_imperial_trigger = {
+						CULTURE_INPUT = steppe
+					}   
+					portrait_royalty_trigger = {
+						CULTURE_INPUT = steppe
+					}   
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_ep1_dlc_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## Northern Pagans ##
+
+	northern_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = northern_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 70
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = northern
+                }
+			}
+			modifier = {
+				add = 30
+                portrait_commoner_clothing_trigger = {
+                    CULTURE_INPUT = northern
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	northern_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = northern_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = northern } 
+			modifier = {
+				add = 50
+				OR = {
+	                portrait_low_nobles_clothing_trigger = {
+	                    CULTURE_INPUT = northern
+	                }
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = yes
+            }
+		}
+	}
+
+	northern_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = northern_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = northern
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	northern_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = northern_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = northern
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+    northern_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = northern_war
+                accessory = m_headgear_sec_northern_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50 
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = northern
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = { 
+                        CULTURE_INPUT = northern
+                    }
+                    portrait_low_nobles_armor_trigger = { 
+                        CULTURE_INPUT = northern
+                    }
+                }
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+        }
+    }
+	
+## FP3 Iranian ##
+
+fp3_iranian_low_nobles = {
+	dna_modifiers = {
+		accessory = {
+			mode = add
+			gene = headgear
+			template = fp3_iranian_low_nobility
+			range = { 0 1 } # For the randomness to work correctly
+		}
+	}
+	weight = {
+		base = 0
+		court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = fp3_iranian } 
+		modifier = {
+			add = 51 # Slightly higher
+			portrait_low_nobles_clothing_trigger = {
+				CULTURE_INPUT = fp3_iranian
+			}
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = no
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = yes
+		}
+	}
+}
+
+fp3_iranian_high_nobles = {
+	dna_modifiers = {
+		accessory = {
+			mode = add
+			gene = headgear
+			template = fp3_iranian_nobility
+			range = { 0 1 } # For the randomness to work correctly
+		}
+	}
+	weight = {
+		base = 0
+		modifier = {
+			add = 51 # Slightly higher
+			portrait_high_nobles_headgear_trigger = {
+				CULTURE_INPUT = fp3_iranian
+			}   
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = no
+		}
+	}
+}
+
+fp3_iranian_royalty = {
+	dna_modifiers = {
+		accessory = {
+			mode = add
+			gene = headgear
+			template = fp3_iranian_royalty
+			range = { 0 1 } # For the randomness to work correctly
+		}
+	}
+	weight = {
+		base = 0
+		modifier = {
+			add = 51 # Slightly higher
+			portrait_royalty_trigger = {
+				CULTURE_INPUT = fp3_iranian
+			}   
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = no
+		}
+	}
+}
+
+fp3_iranian_imperial = {
+	dna_modifiers = {
+		accessory = {
+			mode = add
+			gene = headgear
+			template = fp3_iranian_imperial
+			range = { 0 1 } # For the randomness to work correctly
+		}
+	}
+	weight = {
+		base = 0
+		modifier = {
+			add = 51 # Slightly higher
+			portrait_imperial_trigger = {
+				CULTURE_INPUT = fp3_iranian
+			}   
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = no
+		}
+	}
+}
+
+## FP3 Turkic ##
+
+fp3_turkic_low_nobles = {
+	dna_modifiers = {
+		accessory = {
+			mode = add
+			gene = headgear
+			template = fp3_turkic_low_nobility
+			range = { 0 1 } # For the randomness to work correctly
+		}
+	}
+	weight = {
+		base = 0
+		court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = fp3_turkic } 
+		modifier = {
+			add = 51 # Slightly higher
+			portrait_low_nobles_clothing_trigger = {
+				CULTURE_INPUT = fp3_turkic
+			}
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = no
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = yes
+		}
+	}
+}
+
+fp3_turkic_high_nobles = {
+	dna_modifiers = {
+		accessory = {
+			mode = add
+			gene = headgear
+			template = fp3_turkic_nobility
+			range = { 0 1 } # For the randomness to work correctly
+		}
+	}
+	weight = {
+		base = 0
+		modifier = {
+			add = 51 # Slightly higher
+			portrait_high_nobles_headgear_trigger = {
+				CULTURE_INPUT = fp3_turkic
+			}   
+		}
+		modifier = {
+			factor = 0       # Should NOT show up if not revealing
+			wearing_revealing_clothes_trigger = no
+		}
+	}
+}
+
+## FP2 Iberian ##
+	fp2_iberian_muslim_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_muslim_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }
+			}
+			modifier = {
+				add = 41 # Slightly higher
+				portrait_commoner_no_mayors_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	fp2_iberian_muslim_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_fp2_muslim_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = fp2_iberian_muslim } 
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_low_nobles_clothing_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	fp2_iberian_muslim_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_muslim_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	fp2_iberian_muslim_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_fp2_muslim_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	fp2_iberian_christian_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_christian_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		outfit_tags = { iberian_christian_shrimp_wrap }
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                }
+			}
+			modifier = {
+				add = 41 # Slightly higher
+                portrait_commoner_clothing_trigger = {  
+                    CULTURE_INPUT = fp2_iberian_christian 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes
+            }
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	fp2_iberian_christian_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_christian_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = fp2_iberian_christian } 
+			modifier = {
+				add = 60 # Slightly higher
+                portrait_low_nobles_clothing_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes 
+            }
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	fp2_iberian_christian_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_christian_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 60 # Slightly higher
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                } 
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes 
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	fp2_iberian_christian_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_christian_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                }  
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes 
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## FP1 NORSE ##
+
+	fp1_norse_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp1_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = fp1_norse
+                }
+			}
+			modifier = {
+				add = 41 # Slightly higher
+                portrait_commoner_clothing_trigger = {  
+                    CULTURE_INPUT = fp1_norse 
+                }
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	fp1_norse_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp1_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			court_fashion_level_4_headgear_modifier = { INPUT_PARAMETER = fp1_norse } 
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_low_nobles_clothing_trigger = {
+                    CULTURE_INPUT = fp1_norse
+                }
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	fp1_norse_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp1_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = fp1_norse
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	fp1_norse_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp1_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 51 # Slightly higher
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = fp1_norse
+                }   
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	fp1_norse_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp1_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100 # pick over northern
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = fp1_norse 
+                }
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+## Sub-Saharan Africans ##
+
+	african_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_sub_saharan_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_commoner_headgear_fallback_trigger = {
+                    CULTURE_INPUT = african
+                }
+			}
+			modifier = { # Non-european jesters should not use the jester hat
+				add = 1000
+                portrait_jester_trigger = {  
+                    CULTURE_INPUT = african 
+                }
+			}
+			modifier = {
+				add = 50
+                portrait_commoner_clothing_trigger = {  
+                    CULTURE_INPUT = african 
+                }
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	sub_saharan_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_sub_saharan_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+                portrait_high_nobles_headgear_trigger = {
+                    CULTURE_INPUT = african
+                }   
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = no
+			}
+			modifier = {
+				factor = 0       # Should NOT show up if not revealing
+				wearing_revealing_clothes_trigger = yes
+			}
+		}
+	}
+
+	sub_saharan_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_sub_saharan_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_african_headgear_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	ep1_sub_saharan_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep1_sub_saharan_royalty
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_royalty_african_headgear_trigger = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_ep1_dlc_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	sub_saharan_imperial = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_sub_saharan_imperial
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_imperial_nobles_headgear_trigger = {
+					CULTURE_INPUT = african
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+}

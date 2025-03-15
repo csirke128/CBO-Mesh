@@ -1,0 +1,115 @@
+pdxmesh = {
+	name = "cbo_female_hair_long_braid_01_mesh"
+	file = "cbo_female_hair_long_braid_01.mesh"
+	
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_breast_size_2_max"		type = "cbo_female_hair_long_braid_01_bs_breast_size_2_max.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_breast_size_max"			type = "cbo_female_hair_long_braid_01_bs_breast_size_max.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_butt_size_max"			type = "cbo_female_hair_long_braid_01_bs_butt_size_max.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_dwarf"					type = "cbo_female_hair_long_braid_01_bs_dwarf.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_fat"						type = "cbo_female_hair_long_braid_01_bs_fat.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_muscular"				type = "cbo_female_hair_long_braid_01_bs_muscular.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_cap"						type = "cbo_female_hair_long_braid_01_bs_cap.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_crown"					type = "cbo_female_hair_long_braid_01_bs_crown.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_cap_02"					type = "cbo_female_hair_long_braid_01_bs_cap_02.mesh" }
+	blend_shape = { id = "cbo_female_hair_long_braid_01_bs_infant"					type = "cbo_female_hair_long_braid_01_bs_infant.mesh" }
+
+	meshsettings = {
+		name = "cbo_female_hair_long_braid_01Shape"
+		index = 0
+		texture_diffuse = "f_hair_western_10_diffuse.dds"
+		texture_normal = "f_hair_western_10_normal.dds"
+		texture_specular = "f_hair_western_10_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }
+		shader = "portrait_hair"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "cbo_female_hair_long_braid_01_entity"
+	pdxmesh = "cbo_female_hair_long_braid_01_mesh"
+	
+	attribute = { name = "bs_breast_size_2_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_2_max" }
+	attribute = { name = "bs_breast_size_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_max" }
+	attribute = { name = "bs_butt_size_max"					blend_shape = "cbo_female_hair_long_braid_01_bs_butt_size_max" }
+	attribute = { name = "bs_dwarf_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_dwarf" }
+	attribute = { name = "bs_fat_1_body"					blend_shape = "cbo_female_hair_long_braid_01_bs_fat" }
+	attribute = { name = "bs_muscular_1"					blend_shape = "cbo_female_hair_long_braid_01_bs_muscular" }
+	attribute = { name = "bs_infant_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_infant" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+entity = {
+	name = "cbo_female_hair_long_braid_01_cap_entity"
+	pdxmesh = "cbo_female_hair_long_braid_01_mesh"
+	
+	attribute = { name = "bs_breast_size_2_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_2_max" }
+	attribute = { name = "bs_breast_size_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_max" }
+	attribute = { name = "bs_butt_size_max"					blend_shape = "cbo_female_hair_long_braid_01_bs_butt_size_max" }
+	attribute = { name = "bs_dwarf_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_dwarf" }
+	attribute = { name = "bs_fat_1_body"					blend_shape = "cbo_female_hair_long_braid_01_bs_fat" }
+	attribute = { name = "bs_muscular_1"					blend_shape = "cbo_female_hair_long_braid_01_bs_muscular" }
+	attribute = { name = "bs_infant_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_infant" }
+	attribute = { name = "bs_cap"							blend_shape = "cbo_female_hair_long_braid_01_bs_cap" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+entity = {
+	name = "cbo_female_hair_long_braid_01_cap_02_entity"
+	pdxmesh = "cbo_female_hair_long_braid_01_mesh"
+	
+	attribute = { name = "bs_breast_size_2_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_2_max" }
+	attribute = { name = "bs_breast_size_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_max" }
+	attribute = { name = "bs_butt_size_max"					blend_shape = "cbo_female_hair_long_braid_01_bs_butt_size_max" }
+	attribute = { name = "bs_dwarf_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_dwarf" }
+	attribute = { name = "bs_fat_1_body"					blend_shape = "cbo_female_hair_long_braid_01_bs_fat" }
+	attribute = { name = "bs_muscular_1"					blend_shape = "cbo_female_hair_long_braid_01_bs_muscular" }
+	attribute = { name = "bs_infant_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_infant" }
+	attribute = { name = "bs_cap_02"						blend_shape = "cbo_female_hair_long_braid_01_bs_cap_02" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+
+
+entity = {
+	name = "cbo_female_hair_long_braid_01_crown_entity"
+	pdxmesh = "cbo_female_hair_long_braid_01_mesh"
+	
+	attribute = { name = "bs_breast_size_2_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_2_max" }
+	attribute = { name = "bs_breast_size_max"				blend_shape = "cbo_female_hair_long_braid_01_bs_breast_size_max" }
+	attribute = { name = "bs_butt_size_max"					blend_shape = "cbo_female_hair_long_braid_01_bs_butt_size_max" }
+	attribute = { name = "bs_dwarf_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_dwarf" }
+	attribute = { name = "bs_fat_1_body"					blend_shape = "cbo_female_hair_long_braid_01_bs_fat" }
+	attribute = { name = "bs_muscular_1"					blend_shape = "cbo_female_hair_long_braid_01_bs_muscular" }
+	attribute = { name = "bs_infant_1"						blend_shape = "cbo_female_hair_long_braid_01_bs_infant" }
+	attribute = { name = "bs_crown"							blend_shape = "cbo_female_hair_long_braid_01_bs_crown" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}
+}
+

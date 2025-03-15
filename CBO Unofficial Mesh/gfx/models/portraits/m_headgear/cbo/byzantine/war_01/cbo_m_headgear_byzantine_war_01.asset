@@ -1,0 +1,82 @@
+pdxmesh = {
+	name = "cbo_m_headgear_byzantine_war_01_mesh"
+	file = "cbo_m_headgear_byzantine_war_01.mesh"
+
+	meshsettings = {
+		name = "cbo_m_headgear_byzantine_war_01Shape"
+		index = 0
+		texture_diffuse = "m_headgear_sec_byzantine_war_nob_01_lo_diffuse.dds"
+		texture_normal = "m_headgear_sec_byzantine_war_nob_01_hi_normal.dds"
+		texture_specular = "m_headgear_sec_byzantine_war_nob_01_hi_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "cbo_m_headgear_byzantine_war_01_lo_entity"
+	pdxmesh = "cbo_m_headgear_byzantine_war_01_mesh"
+
+		game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/byzantine/war_nob_01/m_headgear_sec_byzantine_war_nob_01_hi_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_headgear_war_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "cbo_m_headgear_byzantine_war_01_hi_entity"
+	pdxmesh = "cbo_m_headgear_byzantine_war_01_mesh"
+
+		meshsettings = {
+		name = "cbo_m_headgear_byzantine_war_01Shape"
+		index = 0
+		texture_diffuse = "m_headgear_sec_byzantine_war_nob_01_hi_diffuse.dds"
+		texture_normal = "m_headgear_sec_byzantine_war_nob_01_hi_normal.dds"
+		texture_specular = "m_headgear_sec_byzantine_war_nob_01_hi_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+		}
+
+		game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/byzantine/war_nob_01/m_headgear_sec_byzantine_war_nob_01_hi_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_headgear_war_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+pdxmesh = {
+	name = "cbo_m_headgear_byzantine_war_01_roy_mesh"
+	file = "cbo_m_headgear_byzantine_war_01_roy.mesh"
+
+	meshsettings = {
+		name = "cbo_m_headgear_byzantine_war_01_royShape"
+		index = 0
+		texture_diffuse = "m_headgear_sec_byzantine_war_nob_01_roy_diffuse.dds"
+		texture_normal = "m_headgear_sec_byzantine_war_nob_01_hi_normal.dds"
+		texture_specular = "m_headgear_sec_byzantine_war_nob_01_hi_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "cbo_m_headgear_byzantine_war_01_roy_entity"
+	pdxmesh = "cbo_m_headgear_byzantine_war_01_roy_mesh"
+
+		game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/byzantine/war_nob_01/m_headgear_sec_byzantine_war_nob_01_hi_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_headgear_war_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+

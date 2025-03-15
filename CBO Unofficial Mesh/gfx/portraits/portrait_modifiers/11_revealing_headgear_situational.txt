@@ -1,0 +1,223 @@
+﻿revealing_headgear_situational = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 11
+
+
+	western_stealth = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_stealth
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		outfit_tags = {
+			western_stealth
+			western_stealth_hood
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 110
+				portrait_stealth_trigger = yes
+				OR = {
+					portrait_western_clothing_trigger = yes
+					portrait_byzantine_clothing_trigger = yes
+					portrait_northern_clothing_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	mena_stealth = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = mena_stealth
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		outfit_tags = {
+			mena_stealth
+			mena_stealth_hood
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 110
+				portrait_stealth_trigger = yes
+				OR = {
+					portrait_mena_clothing_trigger = yes
+					portrait_indian_clothing_trigger = yes
+					portrait_steppe_clothing_trigger = yes
+					portrait_african_clothing_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	jester_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_ep1_jester
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { jester_outfit }
+		weight = {
+			base = -100
+			modifier = {
+				add = 1000
+				OR = {
+					portrait_jester_trigger = { CULTURE_INPUT = western }
+					portrait_jester_trigger = { CULTURE_INPUT = byzantine }
+					portrait_jester_trigger = { CULTURE_INPUT = northern }
+				}				
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_adult = no
+					should_be_naked_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+	
+	hajj_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = mena_common
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				OR = {
+					portrait_ep2_hajj_clothes_trigger = yes
+					portrait_ep2_ihram_clothes_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	# EP2 - WEDDINGS
+
+	wedding_western_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_wedding
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		outfit_tags = { spouse_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				has_ep2_dlc_trigger = yes
+				portrait_ep2_wedding_clothes_trigger = yes
+				OR = {
+					portrait_western_clothing_trigger = yes
+					portrait_northern_clothing_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	wedding_mena_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = mena_wedding
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		outfit_tags = { spouse_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				has_ep2_dlc_trigger = yes
+				portrait_ep2_wedding_clothes_trigger = yes
+				OR = {
+					portrait_mena_clothing_trigger = yes
+					portrait_african_clothing_trigger = yes
+					portrait_indian_clothing_trigger = yes
+					portrait_steppe_clothing_trigger = yes
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+
+	wedding_byz_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = byzantine_wedding
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		outfit_tags = { spouse_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				has_ep2_dlc_trigger = yes
+				portrait_ep2_wedding_clothes_trigger = yes
+				portrait_byzantine_clothing_trigger = yes
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if not revealing
+                wearing_revealing_clothes_trigger = no
+            }
+		}
+	}
+	
+
+}

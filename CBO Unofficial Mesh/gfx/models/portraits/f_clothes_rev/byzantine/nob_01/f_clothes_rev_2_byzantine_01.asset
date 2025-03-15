@@ -1,0 +1,153 @@
+pdxmesh = {
+	name = "f_clothes_rev_2_byzantine_01_mesh"
+	file = "f_clothes_rev_2_byzantine_01.mesh"
+
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_bra"					type = "f_clothes_rev_2_byzantine_01_bs_bra.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_bust_max"				type = "f_clothes_rev_2_byzantine_01_bs_bust_max.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_bust_min"				type = "f_clothes_rev_2_byzantine_01_bs_bust_min.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_butt_max"				type = "f_clothes_rev_2_byzantine_01_bs_butt_max.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_butt_min"				type = "f_clothes_rev_2_byzantine_01_bs_butt_min.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_dwarf"					type = "f_clothes_rev_2_byzantine_01_bs_dwarf.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_fat"					type = "f_clothes_rev_2_byzantine_01_bs_fat.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_gaunt"					type = "f_clothes_rev_2_byzantine_01_bs_gaunt.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_hips_max"				type = "f_clothes_rev_2_byzantine_01_bs_hips_max.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_hips_min"				type = "f_clothes_rev_2_byzantine_01_bs_hips_min.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_infant"				type = "f_clothes_rev_2_byzantine_01_bs_infant.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_musc"					type = "f_clothes_rev_2_byzantine_01_bs_musc.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_old"					type = "f_clothes_rev_2_byzantine_01_bs_old.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_preg"					type = "f_clothes_rev_2_byzantine_01_bs_preg.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_pubic"				type = "f_clothes_rev_2_byzantine_01_bs_pubic.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_seated"					type = "f_clothes_rev_2_byzantine_01_bs_seated.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_sldrs_max"				type = "f_clothes_rev_2_byzantine_01_bs_sldrs_max.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_sldrs_min"				type = "f_clothes_rev_2_byzantine_01_bs_sldrs_min.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_up_back"				type = "f_clothes_rev_2_byzantine_01_bs_up_back.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_up_front"				type = "f_clothes_rev_2_byzantine_01_bs_up_front.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_waist_max"				type = "f_clothes_rev_2_byzantine_01_bs_waist_max.mesh" }
+	blend_shape = { id = "f_clothes_rev_2_byzantine_01_bs_waist_min"				type = "f_clothes_rev_2_byzantine_01_bs_waist_min.mesh" }
+
+	meshsettings = {
+		name = "f_clothes_rev_2_byzantine_01Shape"
+		index = 0
+		texture_diffuse = "f_clothing_secular_byzantine_nob_01_diffuse.dds"
+		texture_normal = "f_clothing_secular_byzantine_nob_01_normal.dds"
+		texture_specular = "f_clothing_secular_byzantine_nob_01_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_revealing_2_byzantine_01_entity"
+	pdxmesh = "f_clothes_rev_2_byzantine_01_mesh"
+}
+
+entity = {
+	name = "female_clothes_revealing_2_byzantine_01_common_entity"
+	pdxmesh = "f_clothes_rev_2_byzantine_01_mesh"
+
+	attribute = { name = "bs_body_bra"						blend_shape = "f_clothes_rev_2_byzantine_01_bs_bra" }
+	attribute = { name = "bs_body_breast_size_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_bust_max" }
+	attribute = { name = "bs_body_breast_size_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_bust_min" }
+	attribute = { name = "bs_body_butt_size_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_butt_max" }
+	attribute = { name = "bs_body_butt_size_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_butt_min" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_dwarf" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_gaunt" }
+	attribute = { name = "bs_body_hips_max"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_hips_max" }
+	attribute = { name = "bs_body_hips_min"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_hips_min" }
+	attribute = { name = "bs_body_infant_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_infant" }
+	attribute = { name = "bs_body_muscular_1"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_musc" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_old" }
+	attribute = { name = "bs_body_pregnant_1"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_preg" }
+	attribute = { name = "bs_pubic_hair"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_pubic" }
+	attribute = { name = "bs_body_seated"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_seated" }
+	attribute = { name = "bs_body_shoulders_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_sldrs_max" }
+	attribute = { name = "bs_body_shoulders_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_sldrs_min" }
+	attribute = { name = "bs_body_upskirt_front"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_up_front" }
+	attribute = { name = "bs_body_upskirt_back"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_up_back" }
+	attribute = { name = "bs_body_waist_max"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_waist_max" }
+	attribute = { name = "bs_body_waist_min"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_waist_min" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/f_clothes/byzantine/nob_01/f_clothing_secular_byzantine_nob_01_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_common_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "female_clothes_revealing_2_byzantine_01_low_entity"
+	pdxmesh = "f_clothes_rev_2_byzantine_01_mesh"
+
+	attribute = { name = "bs_body_bra"						blend_shape = "f_clothes_rev_2_byzantine_01_bs_bra" }
+	attribute = { name = "bs_body_breast_size_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_bust_max" }
+	attribute = { name = "bs_body_breast_size_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_bust_min" }
+	attribute = { name = "bs_body_butt_size_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_butt_max" }
+	attribute = { name = "bs_body_butt_size_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_butt_min" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_dwarf" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_gaunt" }
+	attribute = { name = "bs_body_hips_max"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_hips_max" }
+	attribute = { name = "bs_body_hips_min"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_hips_min" }
+	attribute = { name = "bs_body_infant_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_infant" }
+	attribute = { name = "bs_body_muscular_1"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_musc" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_old" }
+	attribute = { name = "bs_body_pregnant_1"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_preg" }
+	attribute = { name = "bs_pubic_hair"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_pubic" }
+	attribute = { name = "bs_body_seated"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_seated" }
+	attribute = { name = "bs_body_shoulders_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_sldrs_max" }
+	attribute = { name = "bs_body_shoulders_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_sldrs_min" }
+	attribute = { name = "bs_body_upskirt_front"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_up_front" }
+	attribute = { name = "bs_body_upskirt_back"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_up_back" }
+	attribute = { name = "bs_body_waist_max"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_waist_max" }
+	attribute = { name = "bs_body_waist_min"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_waist_min" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/f_clothes/byzantine/nob_01/f_clothing_secular_byzantine_nob_01_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_low_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "female_clothes_revealing_2_byzantine_01_high_entity"
+	pdxmesh = "f_clothes_rev_2_byzantine_01_mesh"
+
+	attribute = { name = "bs_body_bra"						blend_shape = "f_clothes_rev_2_byzantine_01_bs_bra" }
+	attribute = { name = "bs_body_breast_size_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_bust_max" }
+	attribute = { name = "bs_body_breast_size_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_bust_min" }
+	attribute = { name = "bs_body_butt_size_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_butt_max" }
+	attribute = { name = "bs_body_butt_size_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_butt_min" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_dwarf" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_gaunt" }
+	attribute = { name = "bs_body_hips_max"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_hips_max" }
+	attribute = { name = "bs_body_hips_min"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_hips_min" }
+	attribute = { name = "bs_body_infant_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_infant" }
+	attribute = { name = "bs_body_muscular_1"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_musc" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_old" }
+	attribute = { name = "bs_body_pregnant_1"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_preg" }
+	attribute = { name = "bs_pubic_hair"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_pubic" }
+	attribute = { name = "bs_body_seated"					blend_shape = "f_clothes_rev_2_byzantine_01_bs_seated" }
+	attribute = { name = "bs_body_shoulders_max"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_sldrs_max" }
+	attribute = { name = "bs_body_shoulders_min"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_sldrs_min" }
+	attribute = { name = "bs_body_upskirt_front"			blend_shape = "f_clothes_rev_2_byzantine_01_bs_up_front" }
+	attribute = { name = "bs_body_upskirt_back"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_up_back" }
+	attribute = { name = "bs_body_waist_max"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_waist_max" }
+	attribute = { name = "bs_body_waist_min"				blend_shape = "f_clothes_rev_2_byzantine_01_bs_waist_min" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/f_clothes/byzantine/nob_01/f_clothing_secular_byzantine_nob_01_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_high_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}

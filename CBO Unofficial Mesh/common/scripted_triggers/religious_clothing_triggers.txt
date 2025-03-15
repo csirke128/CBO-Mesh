@@ -1,0 +1,193 @@
+﻿
+
+equal_gender_religious_clothing = {
+	faith = {
+		has_doctrine_parameter = clergy_can_be_either_gender
+	}
+}
+
+fem_dom_gender_religious_clothing = {
+	faith = {
+		has_doctrine_parameter = clergy_must_be_female
+	}
+	
+}
+
+fem_religious_clothing = {
+	Not = {
+		faith = {
+			has_doctrine_parameter = clergy_must_be_male
+		}
+	}
+}
+
+portrait_religious_christian_trigger = {
+    religion = religion:christianity_religion	
+}
+
+portrait_religious_catholic_trigger = {
+	And = {
+		portrait_religious_christian_trigger = yes
+		portrait_religious_orthodox_trigger = no
+	}
+}
+
+portrait_religious_orthodox_trigger = {
+    OR = {
+        faith = faith:orthodox
+        faith = faith:armenian_apostolic
+        faith = faith:coptic
+        faith = faith:messalian
+        faith = faith:bogomilist
+        faith = faith:paulician
+        faith = faith:nestorian
+		And = {
+			religion = religion:christianity_religion
+			Not = { faith = faith:catholic }
+			culture = { has_clothing_gfx = byzantine_clothing_gfx }
+		}
+    }
+}
+
+
+portrait_religious_devoted_trigger = {
+	exists = this
+    OR = {
+        portrait_has_trait_trigger = { TRAIT = devoted }
+        AND = {
+            faith = {
+                has_doctrine_parameter = vows_of_poverty_active
+            }
+            OR = {
+                AND = {
+                    has_council_position = councillor_court_chaplain
+                    faith = {
+                        has_doctrine = doctrine_theocracy_lay_clergy
+                    }
+                }
+                is_theocratic_lessee = yes
+                AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+            }
+        }
+    }	
+}
+
+portrait_religious_high_trigger = {
+	exists = this
+    OR = {
+        has_character_flag = need_priest_outfit
+        is_theocratic_lessee = yes
+        AND = { 
+        	is_ruler = yes 
+        	government_has_flag = government_is_theocracy 
+        }
+        has_council_position = councillor_court_chaplain
+    }
+    NOT = {
+        faith = {
+            has_doctrine_parameter = vows_of_poverty_active
+        }
+    }
+}
+
+portrait_religious_high_no_poverty_trigger = {
+	exists = this
+	OR = {
+		has_character_flag = need_priest_outfit
+		is_theocratic_lessee = yes
+		AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+		has_council_position = councillor_court_chaplain
+	}	
+}
+
+portrait_religious_high_headgear_trigger = {
+	exists = this
+	OR = {
+		has_character_flag = need_priest_outfit
+		is_theocratic_lessee = yes
+		AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+		has_council_position = councillor_court_chaplain
+	}
+	NAND = {
+		is_ruler = yes
+		primary_title = {
+			any_controlled_faith = {
+				this = faith:$FAITH_INPUT$
+			}
+		}
+	}
+	NOT = {
+		faith = {
+			has_doctrine_parameter = vows_of_poverty_active
+		}
+	}
+}
+
+portrait_religious_head_trigger = {
+	exists = this
+	faith = { has_doctrine_parameter = spiritual_head_of_faith }
+    any_held_title = {
+        is_head_of_faith = yes
+    }
+    NOT = {
+        faith = {
+            has_doctrine_parameter = vows_of_poverty_active
+        }
+    }
+}
+
+portrait_religious_head_no_poverty_trigger = {
+	exists = this
+	exists = primary_title
+	faith = { has_doctrine_parameter = spiritual_head_of_faith }
+	any_held_title = {
+		is_head_of_faith = yes
+	}	
+}
+
+portrait_religious_head_popes_trigger = {
+	exists = this
+	faith = { has_doctrine_parameter = spiritual_head_of_faith }
+	OR = {
+		AND = {
+			is_adult = yes
+			religion = religion:christianity_religion
+			exists = primary_title
+			any_held_title = {
+				is_head_of_faith = yes
+			}
+		}
+		AND = {
+			exists = this
+			any_equipped_character_artifact = {
+				has_variable = pope_hat
+			}		
+		}		
+	}
+}
+
+portrait_religious_head_ruler_trigger = {
+	exists = this
+	faith = { has_doctrine_parameter = spiritual_head_of_faith }
+    any_held_title = {
+        is_head_of_faith = yes
+    }
+    is_ruler = yes
+    NOT = {
+        faith = {
+            has_doctrine_parameter = vows_of_poverty_active
+        }
+    }
+}
+
+portrait_religious_head_caliph_trigger = {
+    exists = this
+    is_ruler = yes
+    religion = religion:$RELIGION_INPUT$_religion
+    any_held_title = {
+        any_controlled_faith = {
+            religion = religion:$RELIGION_INPUT$_religion
+        }
+    }
+    NOT = { portrait_wear_armor_trigger = yes }
+}

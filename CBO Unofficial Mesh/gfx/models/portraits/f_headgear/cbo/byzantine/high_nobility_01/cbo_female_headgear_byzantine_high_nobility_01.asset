@@ -1,0 +1,42 @@
+pdxmesh = {
+	name = "cbo_female_headgear_byzantine_high_nobility_01_mesh"
+	file = "cbo_female_headgear_byzantine_high_nobility_01.mesh"
+
+	meshsettings = {
+		name = "cbo_female_headgear_byzantine_high_nobility_01Shape"
+		index = 0
+		texture_diffuse = "f_headgear_secular_byzantine_hi_nob_01_hair_diffuse.dds"
+		texture_normal = "f_headgear_secular_byzantine_hi_nob_01_hair_normal.dds"
+		texture_specular = "f_headgear_secular_byzantine_hi_nob_01_hair_properties.dds"
+		shader = "portrait_hair"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+	meshsettings = {
+		name = "cbo_female_headgear_byzantine_high_nobility_01Shape"
+		index = 1
+		texture_diffuse = "f_headgear_secular_byzantine_hi_nob_01_diffuse.dds"
+		texture_normal = "f_headgear_secular_byzantine_hi_nob_01_normal.dds"
+		texture_specular = "f_headgear_secular_byzantine_hi_nob_01_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "cbo_female_headgear_byzantine_high_nobility_01_entity"
+	pdxmesh = "cbo_female_headgear_byzantine_high_nobility_01_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+            color_mask_remap_interval = {
+                interval = {0.0 1.0}
+            }
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/f_headgear/byzantine/hi_nob_01/f_headgear_secular_byzantine_hi_nob_01_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "western_nobility_high_01"	#A "variation" object in gfx/portraits/accessory_variations/
+	
+			}
+        }
+	}
+}

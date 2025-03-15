@@ -1,0 +1,523 @@
+﻿cbo_clothes_religious = { # All clothes triggers are found in 00_clothing_triggers.txt
+
+    usage = game
+    selection_behavior = weighted_random
+    priority = 4
+
+## Orthodox ##
+
+    change_nothing = {
+        weight = {
+            base = 50
+        }
+    }
+
+    religious_orthodox_head_clothes_equal = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_orthodox_head_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 150
+                portrait_religious_head_trigger = yes
+                portrait_religious_orthodox_trigger = yes
+				equal_gender_religious_clothing = yes
+            }
+        }
+    }
+
+    religious_orthodox_high_clothes_equal = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_orthodox_high_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit bishop_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 120
+                portrait_religious_high_trigger = yes
+                portrait_religious_orthodox_trigger = yes
+				equal_gender_religious_clothing = yes
+            }
+        }
+    }
+
+## Catholic ##  
+
+
+    religious_catholic_head_clothes_equal = { # The Pope
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_catholic_head_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 120
+                portrait_religious_head_trigger = yes
+                portrait_religious_catholic_trigger = yes
+				equal_gender_religious_clothing = yes
+            }
+        }
+    }
+
+    religious_catholic_high_clothes_equal = { # Catholic Bishops and Priests
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_catholic_high_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit bishop_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 110
+                portrait_religious_high_trigger = yes
+                portrait_religious_christian_trigger = yes
+				equal_gender_religious_clothing = yes
+            }
+        }
+    }
+
+    religious_catholic_devoted_clothes_equal = { # Christian Monks and Nuns
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_catholic_devoted_clothes_equal
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { monk_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                portrait_religious_devoted_trigger = yes
+                portrait_religious_christian_trigger = yes
+				fem_religious_clothing = yes
+            }
+        }
+    }
+
+
+## Jewish ##
+
+
+    religious_jewish_head_clothes_equal = { # Kohen Gadol
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_jewish_head_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 120
+                portrait_religious_head_ruler_trigger = yes
+                portrait_religious_jewish_trigger = yes            
+				fem_religious_clothing = yes    
+            }
+        }
+    }
+
+    religious_jewish_high_clothes_equal = { # Jewish Priest (Kohen)
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_jewish_high_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 110
+                portrait_religious_high_trigger = yes
+				fem_religious_clothing = yes
+                OR = {
+                    portrait_religious_jewish_trigger = yes
+                }
+            }
+        }
+    }
+
+
+## Muslim ##
+
+    religious_muslim_head_clothes_equal = { # Caliph
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_muslim_head_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 112
+				fem_religious_clothing = yes
+                portrait_religious_head_caliph_trigger = {
+                    RELIGION_INPUT = islam
+                }
+            }
+        }
+    } 
+
+    religious_muslim_high_clothes_equal = { # Imams
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_muslim_high_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 111
+				fem_religious_clothing = yes
+                portrait_religious_high_trigger = yes
+                portrait_religious_muslim_trigger = yes
+            }
+        }
+    }
+
+
+## Buddhist ##
+
+
+    religious_buddhist_high_clothes_equal = { # Buddhist Monks
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_buddhist_high_clothes_equal
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 110
+				fem_religious_clothing = yes
+                portrait_religious_high_trigger = yes
+                portrait_religious_buddhist_trigger = yes
+            }
+        }
+    }
+
+    religious_buddhist_devoted_clothes_equal = { # Buddhist Monks
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_buddhist_high_clothes_equal
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { monk_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+				fem_religious_clothing = yes
+                portrait_religious_devoted_trigger = yes
+                portrait_religious_buddhist_trigger = yes
+            }
+        }
+    }
+
+    religious_orthodox_head_clothes_fem = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_orthodox_head_clothes_fem
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 150
+				fem_dom_gender_religious_clothing = yes
+                portrait_religious_head_trigger = yes
+                portrait_religious_orthodox_trigger = yes
+            }
+        }
+    }
+
+    religious_orthodox_high_clothes_fem = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_orthodox_high_clothes_fem
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit bishop_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 120
+				fem_dom_gender_religious_clothing = yes
+                portrait_religious_high_trigger = yes
+                portrait_religious_orthodox_trigger = yes
+            }
+        }
+    }
+
+## Catholic ##  
+
+
+    religious_catholic_head_clothes_fem = { # The Pope
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_catholic_head_clothes_fem
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 120
+				fem_dom_gender_religious_clothing = yes
+                portrait_religious_head_trigger = yes
+                portrait_religious_catholic_trigger = yes
+            }
+        }
+    }
+
+    religious_catholic_high_clothes_fem = { # Catholic Bishops and Priests
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = cbo_clothes
+                template = religious_catholic_high_clothes_fem
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = no_clothes
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { priest_outfit bishop_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 110
+				fem_dom_gender_religious_clothing = yes
+                portrait_religious_high_trigger = yes
+                portrait_religious_christian_trigger = yes
+            }
+        }
+    }
+}

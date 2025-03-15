@@ -1,0 +1,240 @@
+﻿cbo_headgear_religious = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 4
+
+## Orthodox ##
+
+	change_nothing = {
+		weight = {
+			base = 50
+		}
+	}
+
+	religious_orthodox_high_equal = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_religious_orthodox_high_equal
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { priest_outfit bishop_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 130
+				fem_religious_clothing = yes
+				portrait_religious_orthodox_trigger = yes
+				portrait_religious_high_headgear_trigger = {
+					FAITH_INPUT = orthodox
+				}
+			}
+		}
+	}
+
+	religious_orthodox_head_equal = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_religious_orthodox_head_equal
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				fem_religious_clothing = yes
+				portrait_religious_head_trigger = yes
+				faith = faith:orthodox
+			}
+		}
+	}
+
+
+## Catholic ##
+
+	catholic_head_equal = {
+		outfit_tags = { rank_headgear }
+		usage = game
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_catholic_head_equal
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 120
+				fem_religious_clothing = yes
+				portrait_religious_head_trigger = yes
+				portrait_religious_catholic_trigger = yes	
+			}	
+		}
+	}
+
+	catholic_high_equal = {
+		outfit_tags = { rank_headgear }
+		usage = game
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_catholic_high_equal
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { priest_outfit bishop_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 120
+				fem_religious_clothing = yes
+				portrait_religious_christian_trigger = yes
+				portrait_religious_high_trigger = yes
+			}
+		}
+	}
+
+	popes_equal = {
+		outfit_tags = { rank_headgear }
+		usage = game
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = cbo_catholic_head_equal
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 140
+				fem_religious_clothing = yes
+				portrait_religious_head_popes_trigger = yes
+			}
+		}
+	}
+
+	fem_dom_rel_headgear = {
+		outfit_tags = { rank_headgear }
+		usage = game
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cbo_headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				is_male = yes
+				fem_dom_gender_religious_clothing = yes
+				Or = {
+					portrait_religious_head_popes_trigger = yes
+					And = {
+						portrait_religious_christian_trigger = yes
+						portrait_religious_high_trigger = yes
+					}
+					And = {
+						portrait_religious_head_trigger = yes
+						portrait_religious_catholic_trigger = yes	
+					}
+					And = {
+						portrait_religious_head_trigger = yes
+						faith = faith:orthodox
+					}
+					And = {
+						portrait_religious_orthodox_trigger = yes
+						portrait_religious_high_headgear_trigger = {
+							FAITH_INPUT = orthodox
+						}
+					}
+				}
+			}
+		}
+	}
+}
