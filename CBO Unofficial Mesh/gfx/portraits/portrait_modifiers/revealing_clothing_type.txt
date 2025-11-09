@@ -1,0 +1,30 @@
+﻿clothing_type_customization = {
+	usage = customization
+	interface_position = 1
+	default_clothing = {
+		usage = customization
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothing_type
+				template = default_clothing
+				value = 1
+			}
+		}
+	}
+	revealing_2 = {
+		usage = customization
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothing_type
+				template = revealing_2
+				value = 1
+			}
+		}
+        is_valid_custom = {
+            age >= 18
+        }
+	}
+    dummy = {}
+}
