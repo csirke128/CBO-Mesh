@@ -1,8 +1,8 @@
-version="1.9"
+version="1.10.1"
 tags={
 	"Portraits"
 	"Graphics"
 	"Events"
 }
 name="CBO Unofficial Mesh"
-supported_version="1.17.*"
+supported_version="1.18.*"
