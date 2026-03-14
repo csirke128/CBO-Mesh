@@ -18,7 +18,7 @@ pdxmesh = {
 	blend_shape = { id = "m_clothes_sec_ccp5_english_war_nob_03_bs_waist_min"		    type = "m_clothes_sec_ccp5_english_war_nob_03_bs_waist_min.mesh" }
 
 	meshsettings = {
-		name = "m_clothes_sec_ccp5_english_war_nob_03Shape" 
+		name = "m_clothes_sec_ccp5_english_war_nob_02Shape" 
 		index = 0
 		texture_diffuse = "m_clothes_sec_ccp5_english_war_nob_02_diffuse.dds"
 		texture_normal = "m_clothes_sec_ccp5_english_war_nob_02_normal.dds"
@@ -111,7 +111,7 @@ pdxmesh = {
 	blend_shape = { id = "m_clothes_sec_ccp5_english_war_nob_03_bs_waist_min"		    type = "m_clothes_sec_ccp5_english_war_nob_03_bs_waist_min.mesh" }
 
 	meshsettings = {
-		name = "m_clothes_sec_ccp5_english_war_nob_03Shape" 
+		name = "m_clothes_sec_ccp5_english_war_nob_02Shape" 
 		index = 0
 		texture_diffuse = "m_clothes_sec_ccp5_english_war_nob_02_diffuse.dds"
 		texture_normal = "m_clothes_sec_ccp5_english_war_nob_02_normal.dds"
