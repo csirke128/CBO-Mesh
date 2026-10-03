@@ -9,7 +9,7 @@ female_clothes_religious_catholic_devoted_02_common = {
 	set_tags = "breasts_clothed_revealing_2"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
 	entity = { required_tags = "revealing_2"		shared_pose_entity = torso		entity = f_clothes_rev_2_catholic_dev_02_entity }
-	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_02_entity }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_02_benedictine_entity }
 }
 
 female_clothes_religious_catholic_devoted_02 = {
@@ -17,7 +17,7 @@ female_clothes_religious_catholic_devoted_02 = {
 	set_tags = "breasts_clothed_revealing_2"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
 	entity = { required_tags = "revealing_2"		shared_pose_entity = torso		entity = f_clothes_rev_2_catholic_dev_02_entity }
-	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_02_entity }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_02_benedictine_entity }
 }
 
 female_clothes_religious_catholic_head_01 = {
@@ -82,7 +82,7 @@ female_clothes_religious_orthodox_head_01_common = {
 	set_tags = "breasts_clothed_revealing_2"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
 	entity = { required_tags = "revealing_2"		shared_pose_entity = torso		entity = f_clothes_rev_2_orthodox_head_01_entity }
-	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_orthodox_head_01_common_entity }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_orthodox_head_01_entity }
 }
 
 ## Buddhist Religious Clothes ##

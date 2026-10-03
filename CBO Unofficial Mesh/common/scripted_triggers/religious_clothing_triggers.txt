@@ -36,7 +36,6 @@ portrait_religious_orthodox_trigger = {
     OR = {
         faith = faith:orthodox
         faith = faith:armenian_apostolic
-        faith = faith:coptic
         faith = faith:messalian
         faith = faith:bogomilist
         faith = faith:paulician

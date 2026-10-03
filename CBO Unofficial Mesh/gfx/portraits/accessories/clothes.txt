@@ -1285,6 +1285,13 @@ male_clothes_religious_catholic_head_01 = {
 	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_religious_catholic_head_01_entity }
 }
 
+female_clothes_religious_catholic_head_01 = {
+	set_tags = "shrink_hands,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "gloves_both,shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_head_01_entity }
+}
+
 
 ## War Nobility Clothes ##
 
@@ -2253,16 +2260,54 @@ male_clothes_religious_catholic_high_01 = {
 	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_religious_catholic_high_01_entity }
 }
 
+female_clothes_religious_catholic_high_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly,offset"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_high_01_entity }
+}
+
+female_clothes_religious_catholic_devoted_01_dominican = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly,offset"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	#tags = "christian_clergy"
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_01_dominican_entity }
+}
+
+female_clothes_religious_catholic_devoted_02_franciscan = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly,offset"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	#tags = "christian_clergy"
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_02_franciscan_entity }
+}
+
+female_clothes_religious_catholic_devoted_02_benedictine = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly,offset"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	#tags = "christian_clergy"
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_catholic_devoted_02_benedictine_entity }
+}
+
 
 
 ## DDE Catholic Religious Clothes ##
 
-male_clothes_religious_dde_catholic_high_01_common = {
+male_clothes_religious_dde_catholic_high_01 = {
 	set_tags = "shrink_hands,shrink_arms,shrink_chest,shrink_belly,offset"
 	set_tags = "gloves_both,shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
 	entity = { required_tags = "revealing_2"		shared_pose_entity = torso		entity = m_clothes_rev_2_dde_catholic_high_01_entity }
 	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_religious_dde_catholic_high_01_entity }
+}
+
+female_clothes_religious_dde_catholic_high_01 = {
+	set_tags = "shrink_hands,shrink_arms,shrink_chest,shrink_belly,offset"
+	set_tags = "gloves_both,shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_dde_catholic_high_01_entity }
 }
 
 
@@ -2332,15 +2377,27 @@ male_clothes_religious_orthodox_high_01 = {
 	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_religious_orthodox_high_01_entity }
 }
 
-male_clothes_religious_orthodox_head_01_common = {
+female_clothes_religious_orthodox_high_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_orthodox_high_01_entity }
+}
+
+male_clothes_religious_orthodox_head_01 = {
 	set_tags = "shrink_arms,shrink_chest,shrink_belly,offset"
 	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
 	entity = { required_tags = "revealing_2"		shared_pose_entity = torso		entity = m_clothes_rev_2_orthodox_head_01_entity }
-	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_religious_orthodox_head_01_common_entity }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_religious_orthodox_head_01_entity }
 }
 
-
+female_clothes_religious_orthodox_head_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly,offset"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_religious_orthodox_head_01_entity }
+}
 
 
 
@@ -4602,7 +4659,7 @@ set_tags = "shrink_arms,shrink_chest,shrink_belly"
 }
 
 f_clothes_rel_tgp_buddhist_devoted_01 = {
-set_tags = "shrink_arms,shrink_belly"
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
 	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
 	set_tags = "shrink_armpit_revealing_2,breasts_clothed_revealing_2"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
@@ -4674,7 +4731,7 @@ set_tags = "shrink_arms,shrink_chest,shrink_belly"
 }
 
 f_clothes_sec_tgp_chinese_roy_01 = {
-set_tags = "shrink_arms,shrink_belly"
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
 	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
 	set_tags = "shrink_armpit_revealing_2,breasts_clothed_revealing_2"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
@@ -5277,4 +5334,346 @@ set_tags = ""
 	set_tags = "shrink_armpit_revealing_2,breasts_clothed_revealing_2"
 	entity = { required_tags = "undressed"		shared_pose_entity = torso }
 	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_sec_tgp_southeast_com_01_entity }
+}
+
+#####################################
+#									#
+# 	     PAM - Papal Mayhem		    #
+#									#
+#####################################
+
+m_clothes_rel_pam_benedictine_monk_01_black_a = {
+set_tags = "benedictine_habit_01_hood_black_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_black_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_black_b = {
+set_tags = "benedictine_habit_01_hood_black_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_black_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_brown_a = {
+set_tags = "benedictine_habit_01_hood_brown_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_brown_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_brown_b = {
+set_tags = "benedictine_habit_01_hood_brown_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_brown_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_gray_a = {
+set_tags = "benedictine_habit_01_hood_gray_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_gray_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_gray_b = {
+set_tags = "benedictine_habit_01_hood_gray_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_gray_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_white_a = {
+set_tags = "benedictine_habit_01_hood_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_white_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_01_white_b = {
+set_tags = "benedictine_habit_01_hood_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_01_white_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_black_a = {
+set_tags = "benedictine_habit_02_hood_black_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_black_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_black_b = {
+set_tags = "benedictine_habit_02_hood_black_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_black_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_black_white_a = {
+set_tags = "benedictine_habit_02_hood_black_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_black_white_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_black_white_b = {
+set_tags = "benedictine_habit_02_hood_black_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_black_white_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_brown_a = {
+set_tags = "benedictine_habit_02_hood_brown_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_brown_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_brown_b = {
+set_tags = "benedictine_habit_02_hood_brown_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_brown_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_brown_gray_a = {
+set_tags = "benedictine_habit_02_hood_brown_gray_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_brown_gray_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_brown_gray_b = {
+set_tags = "benedictine_habit_02_hood_brown_gray_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_brown_gray_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_gray_a = {
+set_tags = "benedictine_habit_02_hood_gray_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_gray_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_gray_b = {
+set_tags = "benedictine_habit_02_hood_gray_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_gray_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_white_a = {
+set_tags = "benedictine_habit_02_hood_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_white_entity }
+}
+
+m_clothes_rel_pam_benedictine_monk_02_white_b = {
+set_tags = "benedictine_habit_02_hood_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_benedictine_monk_02_white_entity }
+}
+
+m_clothes_rel_pam_camaldolese_monk_01_white_a = {
+set_tags = "camaldolese_habit_01_hood_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_camaldolese_monk_01_white_entity }
+}
+
+m_clothes_rel_pam_camaldolese_monk_01_white_b = {
+set_tags = "camaldolese_habit_01_hood_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_camaldolese_monk_01_white_entity }
+}
+
+m_clothes_rel_pam_cardinal = {
+set_tags = "shrink_arms,shrink_hands,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_cardinal_entity }
+}
+
+m_clothes_rel_pam_catholic_hi_01 = {
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = m_clothes_rel_pam_catholic_hi_01_entity }
+}
+
+f_clothes_rel_pam_catholic_hi_01 = {
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_catholic_hi_01_entity }
+}
+
+f_clothes_rel_pam_cardinal = {
+set_tags = "shrink_arms,shrink_hands,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_cardinal_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_black_a = {
+set_tags = "benedictine_habit_01_hood_black_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_black_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_black_b = {
+set_tags = "benedictine_habit_01_hood_black_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_black_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_brown_a = {
+set_tags = "benedictine_habit_01_hood_brown_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_brown_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_brown_b = {
+set_tags = "benedictine_habit_01_hood_brown_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_brown_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_gray_a = {
+set_tags = "benedictine_habit_01_hood_gray_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_gray_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_gray_b = {
+set_tags = "benedictine_habit_01_hood_gray_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_gray_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_white_a = {
+set_tags = "benedictine_habit_01_hood_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_white_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_01_white_b = {
+set_tags = "benedictine_habit_01_hood_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_01_white_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_black_a = {
+set_tags = "benedictine_habit_02_hood_black_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_black_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_black_b = {
+set_tags = "benedictine_habit_02_hood_black_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_black_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_black_white_a = {
+set_tags = "benedictine_habit_02_hood_black_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_black_white_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_black_white_b = {
+set_tags = "benedictine_habit_02_hood_black_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_black_white_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_brown_a = {
+set_tags = "benedictine_habit_02_hood_brown_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_brown_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_brown_b = {
+set_tags = "benedictine_habit_02_hood_brown_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_brown_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_brown_gray_a = {
+set_tags = "benedictine_habit_02_hood_brown_gray_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_brown_gray_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_brown_gray_b = {
+set_tags = "benedictine_habit_02_hood_brown_gray_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_brown_gray_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_gray_a = {
+set_tags = "benedictine_habit_02_hood_gray_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_gray_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_gray_b = {
+set_tags = "benedictine_habit_02_hood_gray_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_gray_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_white_a = {
+set_tags = "benedictine_habit_02_hood_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_white_entity }
+}
+
+f_clothes_rel_pam_benedictine_monk_02_white_b = {
+set_tags = "benedictine_habit_02_hood_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_benedictine_monk_02_white_entity }
+}
+
+f_clothes_rel_pam_camaldolese_monk_01_white_a = {
+set_tags = "camaldolese_habit_01_hood_white_down,shrink_arms,shrink_chest,shrink_belly"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_camaldolese_monk_01_entity }
+}
+
+f_clothes_rel_pam_camaldolese_monk_01_white_b = {
+set_tags = "camaldolese_habit_01_hood_white_up,shrink_arms,shrink_chest,shrink_belly,hood_on"
+	set_tags = "shrink_butt,butt_clothed,hips_clothed,shoulders_clothed,waist_clothed,breasts_clothed"
+	entity = { required_tags = "undressed"		shared_pose_entity = torso }
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = f_clothes_rel_pam_camaldolese_monk_01_entity }
 }

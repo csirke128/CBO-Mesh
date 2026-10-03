@@ -28,6 +28,10 @@ pdxmesh = {
 		texture_specular = "m_clothes_religious_catholic_head_01_properties.dds"
 		shader = "portrait_attachment_pattern_alpha_to_coverage"
 		shader_file = "gfx/FX/jomini/portrait.shader"
+		rasterizerstate = "rasterizer_no_culling"
+		additional_shader_defines = {
+		"DOUBLE_SIDED_ENABLED"
+		}
 	}
 }
 

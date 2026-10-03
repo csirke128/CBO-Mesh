@@ -32,7 +32,7 @@ pdxmesh = {
 }
 
 entity = {
-	name = "female_clothes_religious_orthodox_head_01_common_entity"
+	name = "female_clothes_religious_orthodox_head_01_entity"
 	pdxmesh = "f_clothes_rel_orthodox_head_01_mesh"
 
 	attribute = { name = "bs_body_breast_size_max"			blend_shape = "f_clothes_rel_orthodox_head_01_bs_bust_max" }
